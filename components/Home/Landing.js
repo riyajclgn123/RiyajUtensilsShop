@@ -1,8 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function Landing() {
+export default function Landing({posts}) {
+  useEffect(()=>{
+    console.log("posts", posts)
+  })
   const [searchText, setSearchText] = useState();
 
   const onSearchButtonClick = () => {
