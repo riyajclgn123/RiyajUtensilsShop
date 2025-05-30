@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
 import RootLayout from '@/app/layout';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function aboutus() {
   return (
@@ -15,46 +17,53 @@ export default function aboutus() {
       <p className=" mb-7">
       Riyaj Utensils Shop is a trusted family-run business specializing in high-quality copper, brass, and steel kitchenware. With years of experience, we take pride in offering durable and beautifully crafted utensils that blend tradition with modern needs. Our commitment to quality, affordability, and customer satisfaction has made us a go-to destination for households and businesses alike. Explore our collection and experience excellence in every piece!
       </p>
-      <button className="btn btn-primary"><link href="/products">See Our Products</link></button>
+      <button className="btn btn-primary"><Link href="/products">See Our Products</Link></button>
     </div>
   </div>
 </div>
         <div className='flex justify-center items-center pt-5 '>
         <div className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-2 p-2  h-140">
   <div className="carousel-item ">
-    <img
+    <Image
       src="/Images/god1.jpg"
-      className="rounded-box" />
+      className="rounded-box"
+      alt="image" />
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god2.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god3.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god4.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god5.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god6.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      className="rounded-box" />
+    <Image
+      src="https://img.daisyui.com/Images/stock/photo-1601004890684-d8cbf643f5f2.webp"
+      className="rounded-box" 
+       alt="image"/>
   </div>
 </div>
 </div>

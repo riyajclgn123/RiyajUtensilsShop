@@ -8,10 +8,10 @@ import { useEffect, useState } from "react"
 export default function Home() {
   const db =getFirestore(app);
 
-  const [posts, setPosts] = useState([])
-  useEffect(() =>{
-    getPost();
-  },[])
+  // const [posts, setPosts] = useState([])
+  // useEffect(() =>{
+  //   getPost();
+  // },[getPost])
 
   const getPost = async () => {
     const querySnapshot = await getDocs(collection(db, "products"));
@@ -23,7 +23,7 @@ querySnapshot.forEach((doc) => {
   }
   return (
     <div>
-      {posts?<Landing posts={posts}/>:null}
+      {/* {posts?<Landing posts={posts}/>:null} */}
     </div>
   );
 }
