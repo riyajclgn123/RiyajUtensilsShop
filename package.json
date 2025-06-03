@@ -6,24 +6,30 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+      "export": "next export"
   },
   "dependencies": {
+    "@firebase/app": "^0.13.0",
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^1.0.6",
+    "autoprefixer": "^10.4.21",
+    "firebase": "^11.8.1",
     "flowbite": "^3.1.2",
-    "next": "15.2.0",
+    "next": "^15.3.3",
     "next-auth": "^4.24.11",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.9",
-    "daisyui": "^5.0.0",
-    "eslint": "^9",
+    "@tailwindcss/postcss": "^4.1.8",
+    "daisyui": "^5.0.43",
+    "eslint": "^9.0.0",
     "eslint-config-next": "15.2.0",
-    "tailwindcss": "^4.0.9"
+    "firebase-functions": "^6.3.2",
+    "firebase-tools": "^14.5.1",
+    "tailwindcss": "^4.1.8"
   }
 }

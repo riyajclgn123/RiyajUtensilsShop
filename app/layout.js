@@ -1,20 +1,17 @@
-"use client";
-import { SessionProvider } from "next-auth/react";
 import Header from "@/components/Home/Header";
 import Footer from "@/components/Home/Footer";
 import "./globals.css";
-
+import SessionWrapper from "./SessionWrapper";
 
 export default function RootLayout({ children }) {
-  console.log(children);
   return (
     <html lang="en">
       <body>
-        <SessionProvider>
+        <SessionWrapper>
           <Header />
-          <main>{children}</main>
+          <main className="pt-20">{children}</main>
           <Footer />
-        </SessionProvider>
+        </SessionWrapper>
       </body>
     </html>
   );

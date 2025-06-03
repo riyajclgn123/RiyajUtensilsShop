@@ -9,6 +9,7 @@ const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+    secret: process.env.NEXTAUTH_SECRET,
   // Add additional NextAuth configuration here (e.g., callbacks, session, etc.)
 };
 
