@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from 'next/image';
-import { signIn } from "next-auth/react";
+
 
 export default function Header() {
   const { data: session } = useSession();
