@@ -4,6 +4,9 @@ import React from 'react';
 import { useState } from 'react';
 // import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Field, Label, Switch } from '@headlessui/react';
+import Link from 'next/link';
+import Image from 'next/image';
+
 
 
 export default function Contacts() {

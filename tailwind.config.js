@@ -10,6 +10,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('daisyui'), // Only if you want DaisyUI
-  ],
+  require("tailwindcss-animate")
+]
 }
