@@ -1,7 +1,15 @@
 @plugin "daisyui";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
 @import "tailwindcss";
 
-
+html,
+body,
+:root {
+  height:100%;
+}
 
 /* @theme {
   --font-sans: var(--font-geist-sans);

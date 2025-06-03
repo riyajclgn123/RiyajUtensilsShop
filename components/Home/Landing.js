@@ -1,9 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Landing() {
+export default function Landing({posts}) {
+  useEffect(()=>{
+    console.log("posts", posts)
+  })
   const [searchText, setSearchText] = useState();
 
   const onSearchButtonClick = () => {
@@ -15,7 +18,7 @@ export default function Landing() {
       <div className="relative w-full h-[70vh] sm:h-[80vh] lg:h-[80vh] text-white bg-white">
         <Image
           src="/Images/bg.jpg"
-          alt="background image"
+          alt="background Image"
           fill
           style={{ objectFit: "cover", objectPosition: "center" }}
           //className='absolute inset-0'
@@ -81,7 +84,7 @@ export default function Landing() {
 
         <article className="mt-5 flex flex-col md:flex-row items-center justify-between space-x-5">
           <div className="flex-shrink-0">
-            <img
+            <Image
               className="w-full h-auto max-w-xs object-cover rounded-xl"
               src="/Images/shiva.jpg"
               alt="Brass Shiva Statue"
@@ -110,7 +113,7 @@ export default function Landing() {
         <div className="flex flex-col items-center justify-center md:flex-row flex-wrap  gap-6 mt-8  ">
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
+              <Image className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
             </a>
             <div className="p-5">
               <a href="#">
@@ -164,7 +167,7 @@ export default function Landing() {
           </div>
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
+              <Image className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
             </a>
             <div className="p-5">
               <a href="#">
@@ -218,7 +221,7 @@ export default function Landing() {
           </div>
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img className="rounded-t-lg" src="/Images/ceramics.jpg" alt="" />
+              <Image className="rounded-t-lg" src="/Images/ceramics.jpg" alt="" />
             </a>
             <div className="p-5">
               <a href="#">
@@ -273,7 +276,7 @@ export default function Landing() {
 
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img
+              <Image
                 className="rounded-t-lg"
                 src="/Images/silverplated.jpg"
                 alt=""
@@ -334,7 +337,7 @@ export default function Landing() {
         <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-8 items-center">
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
+              <Image className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
             </a>
             <div className="p-5">
               <a href="#">
@@ -388,7 +391,7 @@ export default function Landing() {
           </div>
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
+              <Image className="rounded-t-lg" src="/Images/gagri1.jpg" alt="" />
             </a>
             <div className="p-5">
               <a href="#">
@@ -442,7 +445,7 @@ export default function Landing() {
           </div>
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img className="rounded-t-lg" src="/Images/ceramics.jpg" alt="" />
+              <Image className="rounded-t-lg" src="/Images/ceramics.jpg" alt="" />
             </a>
             <div className="p-5">
               <a href="#">
@@ -497,7 +500,7 @@ export default function Landing() {
 
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ">
             <a href="#">
-              <img
+              <Image
                 className="rounded-t-lg"
                 src="/Images/silverplated.jpg"
                 alt=""

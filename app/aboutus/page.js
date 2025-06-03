@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
-// import  from '@/app/layout';
-import Link from 'next/link';
+import RootLayout from '@/app/layout';
 
 export default function aboutus() {
   return (
@@ -23,39 +22,46 @@ export default function aboutus() {
         <div className='flex justify-center items-center pt-5 '>
         <div className="carousel carousel-center bg-neutral rounded-box max-w-md space-x-2 p-2  h-140">
   <div className="carousel-item ">
-    <img
+    <Image
       src="/Images/god1.jpg"
-      className="rounded-box" />
+      className="rounded-box"
+      alt="image" />
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god2.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god3.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god4.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god5.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
+    <Image
       src="/Images/god6.jpg"
-      className="rounded-box" />
+      className="rounded-box" 
+       alt="image"/>
   </div>
   <div className="carousel-item">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-      className="rounded-box" />
+    <Image
+      src="https://img.daisyui.com/Images/stock/photo-1601004890684-d8cbf643f5f2.webp"
+      className="rounded-box" 
+       alt="image"/>
   </div>
 </div>
 </div>

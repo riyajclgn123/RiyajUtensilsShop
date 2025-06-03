@@ -2,6 +2,8 @@
 import React from 'react';
 // import  from '@/app/layout';
 
+import Image from 'next/image';
+
 export default function ceramicwood() {
   return (
     <>
@@ -16,7 +18,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -29,7 +31,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -42,7 +44,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -55,7 +57,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -68,7 +70,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -81,7 +83,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -97,7 +99,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -110,7 +112,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -123,7 +125,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -136,7 +138,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -149,7 +151,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -162,7 +164,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -179,7 +181,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -192,7 +194,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -205,7 +207,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -216,7 +218,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -227,7 +229,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -238,7 +240,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -255,7 +257,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -266,7 +268,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -277,7 +279,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -288,7 +290,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -299,7 +301,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -310,7 +312,7 @@ export default function ceramicwood() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
