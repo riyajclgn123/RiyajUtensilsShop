@@ -16,7 +16,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -29,7 +29,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -42,7 +42,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -55,7 +55,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -68,7 +68,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -81,7 +81,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -97,7 +97,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -110,7 +110,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -123,7 +123,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -136,7 +136,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -149,7 +149,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -162,7 +162,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -179,7 +179,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -192,7 +192,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -205,7 +205,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -216,7 +216,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -227,7 +227,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -238,7 +238,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -255,7 +255,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -266,7 +266,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -277,7 +277,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -288,7 +288,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -299,7 +299,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>
@@ -310,7 +310,7 @@ export default function BrassPage() {
     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
   </div>
   <figure>
-    <img
+    <Image
       src="/Images/steel1.jpg"
       alt="Shoes" />
   </figure>

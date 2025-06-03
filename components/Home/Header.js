@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
+import Image from 'next/image';
 
 export default function Header() {
   const { data: session } = useSession();
