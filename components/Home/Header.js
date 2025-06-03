@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from 'next/image';
+import { signIn } from "next-auth/react";
 
 export default function Header() {
   const { data: session } = useSession();
@@ -221,7 +222,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     setIsOpen(false);
-                    signIn();
+                    signIn("google");
                   }}
                   className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition"
                 >
