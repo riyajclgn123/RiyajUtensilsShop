@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from 'next/image';
 
-
 export default function Header() {
   const { data: session } = useSession();
   const [isOpen, setIsOpen] = useState(false);
@@ -222,7 +221,7 @@ export default function Header() {
                 <button
                   onClick={() => {
                     setIsOpen(false);
-                    signIn("google");
+                    signIn();
                   }}
                   className="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-bold hover:bg-yellow-300 transition"
                 >
