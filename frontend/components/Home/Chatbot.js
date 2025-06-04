@@ -25,14 +25,14 @@ export default function Chatbot() {
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg"
+          className="bg-black text-white p-4 rounded-full shadow-lg"
         >
           💬
         </button>
       ) : (
-        <div className="bg-white rounded-xl shadow-xl w-80 h-[500px] flex flex-col">
+        <div className="bg-black rounded-xl shadow-xl w-80 h-[500px] flex flex-col text-white">
           {/* Header */}
-          <div className="flex justify-between items-center bg-blue-600 text-white px-4 py-2 rounded-t-xl">
+          <div className="flex justify-between items-center bg-gray-900 text-white px-4 py-2 rounded-t-xl">
             <span className="font-semibold">Riyaj Chatbot</span>
             <button
               onClick={() => setIsOpen(false)}
@@ -43,7 +43,7 @@ export default function Chatbot() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 p-3 overflow-y-auto bg-gray-50">
+          <div className="flex-1 p-3 overflow-y-auto bg-black">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
@@ -54,8 +54,8 @@ export default function Chatbot() {
                 <p
                   className={`inline-block px-3 py-2 rounded-lg ${
                     msg.sender === "user"
-                      ? "bg-blue-100 text-blue-800"
-                      : "bg-gray-200 text-gray-800"
+                      ? "bg-gray-700 text-white"
+                      : "bg-gray-800 text-white"
                   }`}
                 >
                   {msg.text}
@@ -65,18 +65,18 @@ export default function Chatbot() {
           </div>
 
           {/* Input */}
-          <div className="p-2 border-t flex items-center gap-2">
+          <div className="p-2 border-t border-gray-700 flex items-center gap-2 bg-black">
             <input
               type="text"
               placeholder="Type a message"
-              className="flex-1 px-3 py-1 border rounded"
+              className="flex-1 px-3 py-1 rounded bg-gray-800 text-white placeholder-gray-400 border border-gray-600"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
             />
             <button
               onClick={handleSend}
-              className="bg-blue-600 text-white px-3 py-1 rounded"
+              className="bg-gray-700 text-white px-3 py-1 rounded hover:bg-gray-600"
             >
               Send
             </button>
