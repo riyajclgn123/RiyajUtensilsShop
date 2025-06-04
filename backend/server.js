@@ -2,9 +2,7 @@ process.env.GOOGLE_APPLICATION_CREDENTIALS = "key.json";
 require("dotenv").config();
 const express = require("express");
 const { VertexAI } = require("@google-cloud/vertexai");
-const cors = require("cors");
 
-app.use(cors());
 
 const app = express();
 app.use(express.json());
