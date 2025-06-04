@@ -11,7 +11,7 @@ const app = express();
 app.use(cors({
   origin: "https://riyaj-utensils-shop.vercel.app",
    methods: ["POST"],
-    credentials: true,
+    credentials: true, // ✅ Your Vercel frontend URL
 }));
 app.use(express.json());
 
