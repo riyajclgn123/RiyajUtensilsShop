@@ -1,46 +1,45 @@
-const express = require('express');
-const cors = require('cors');
-const { VertexAI } = require('@google-cloud/aiplatform');
-const { GoogleAuth } = require('google-auth-library');
-require('dotenv').config();
-const app = express();
-const port = process.env.PORT || 3001;
+require("dotenv").config();
+const express = require("express");
+const { VertexAI } = require("@google-cloud/vertexai");
 
-app.use(cors());
+const app = express();
 app.use(express.json());
 
-const project = process.env.PROJECT_ID;
-const location = 'us-central1';
+const projectId = "riyaj-utensils-shop-18067"; // ✅ Replace if needed
+const location = "us-central1";
+const modelName = "gemini-2.0-flash-001"; // ✅ FREE and public model
 
-const vertexAi = new VertexAI({
-  projectId: project,
-  location,
-  googleAuthOptions: {
-    keyFile: 'key.json',
-    scopes: 'https://www.googleapis.com/auth/cloud-platform',
-  },
-});
+// Initialize Vertex AI
+const vertexAI = new VertexAI({ project: projectId, location });
+const generativeModel = vertexAI.getGenerativeModel({ model: modelName });
 
-const textClient = new vertexAi.preview.languageModels.ChatServiceClient();
-
-app.post('/api/chat', async (req, res) => {
+// POST endpoint to handle chat requests
+app.post("/chat", async (req, res) => {
   const { message } = req.body;
 
-  const request = {
-    model: 'chat-bison',
-    messages: [{ content: message }],
-    temperature: 0.7,
-  };
+  if (!message) {
+    return res.status(400).json({ error: "Message is required" });
+  }
 
   try {
-    const [response] = await textClient.chat(request);
-    res.json({ reply: response.candidates[0].content });
+    const chat = generativeModel.startChat({});
+    const result = await chat.sendMessageStream(message);
+
+    let responseText = "";
+
+    for await (const item of result.stream) {
+      const part = item?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (part) responseText += part;
+    }
+
+    res.json({ response: responseText });
   } catch (error) {
-    console.error('Vertex AI Error:', error.message);
-    res.status(500).json({ error: 'Failed to generate response' });
+    console.error("❌ Error from Vertex AI:", error.message);
+    res.status(500).json({ error: "Failed to generate response" });
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
