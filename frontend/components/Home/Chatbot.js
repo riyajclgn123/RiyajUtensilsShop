@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { sendMessageToBot } from "@/app/utils/chatbot";
+import { sendMessageToBot } from '../../app/utils/chatbot';
+
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
