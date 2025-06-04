@@ -1,4 +1,12 @@
 module.exports = {
   output: 'export',
-  images: { unoptimized: true }
+  images: { unoptimized: true },
+  async rewrites() {
+    return [
+      {
+        source: "/api/auth/:path*",
+        destination: "https://riyajutensilsshop.onrender.com/api/auth/:path*",
+      },
+    ];
+  },
 };
