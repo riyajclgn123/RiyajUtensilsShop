@@ -6,11 +6,12 @@ export default function Chatbot() {
   const [input, setInput] = useState('');
 
   const sendMessage = async () => {
-    const res = await fetch("http://localhost:3001/api/chat", {
-      method: 'POST',
-      body: JSON.stringify({ message: input }),
-      headers: { 'Content-Type': 'application/json' },
-    });
+const res = await fetch("https://your-app-name.onrender.com/api/chat", {
+  method: "POST",
+  body: JSON.stringify({ message: userMessage }),
+  headers: { "Content-Type": "application/json" },
+});
+
     const data = await res.json();
     setMessages([...messages, { user: input }, { bot: data.reply }]);
     setInput('');
