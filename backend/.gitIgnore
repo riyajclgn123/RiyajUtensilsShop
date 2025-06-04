@@ -1,3 +1,5 @@
 # backend/.gitignore
 key.json
 .env.local
+*.env
+*.env.local
