@@ -9,7 +9,9 @@ process.env.GOOGLE_APPLICATION_CREDENTIALS = "key.json";
 // Setup Express app
 const app = express();
 app.use(cors({
-  origin: "https://riyaj-utensils-shop.vercel.app/", // ✅ Your Vercel frontend URL
+  origin: "https://riyaj-utensils-shop.vercel.app",
+   methods: ["POST"],
+    credentials: true,
 }));
 app.use(express.json());
 
