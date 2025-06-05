@@ -1,12 +1,8 @@
-module.exports = {
-
-  images: { unoptimized: true },
-  async rewrites() {
-    return [
-      {
-        source: "/api/auth/:path*",
-        destination: "https://riyajutensilsshop.onrender.com/api/auth/:path*",
-      },
-    ];
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    unoptimized: true,
   },
 };
+
+module.exports = nextConfig;
