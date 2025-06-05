@@ -3,31 +3,35 @@ const express = require("express");
 const cors = require("cors");
 const { VertexAI } = require("@google-cloud/vertexai");
 
-// Set service account key path
-process.env.GOOGLE_APPLICATION_CREDENTIALS = "key.json";
-
-// Setup Express app
 const app = express();
-app.use(cors({
-  origin: "https://riyaj-utensils-shop.vercel.app",
-   methods: ["POST"],
-    credentials: true, // ✅ Your Vercel frontend URL
-}));
+
+// ✅ CORS Setup (only allow your frontend domain)
+app.use(
+  cors({
+    origin: "https://riyaj-utensils-shop.vercel.app",
+    methods: ["POST"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
-// Vertex AI config
+// ✅ Vertex AI Setup
 const projectId = "riyaj-utensils-shop-18067";
 const location = "us-central1";
 const modelName = "gemini-2.0-flash-001";
 
-// Initialize Vertex AI
+// VertexAI Auth — recommend setting GOOGLE_APPLICATION_CREDENTIALS via Render Dashboard
 const vertexAI = new VertexAI({ project: projectId, location });
 const generativeModel = vertexAI.getGenerativeModel({ model: modelName });
 
-// Chat endpoint
-app.post("/chat", async (req, res) => {
+// ✅ /api/chat endpoint
+app.post("/api/chat", async (req, res) => {
   const { message } = req.body;
-  if (!message) return res.status(400).json({ error: "Message is required" });
+
+  if (!message) {
+    return res.status(400).json({ error: "Message is required" });
+  }
 
   try {
     const chat = generativeModel.startChat({});
@@ -39,15 +43,15 @@ app.post("/chat", async (req, res) => {
       if (part) responseText += part;
     }
 
-    res.json({ reply: responseText }); // 🛠 match frontend expectation
+    return res.json({ reply: responseText });
   } catch (error) {
-    console.error("❌ Error from Vertex AI:", error.message);
-    res.status(500).json({ error: "Failed to generate response" });
+    console.error("❌ Vertex AI Error:", error.message);
+    return res.status(500).json({ error: "Failed to generate response" });
   }
 });
 
-// Start server
+// ✅ Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
