@@ -1,11 +1,12 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
+const pdfParse = require("pdf-parse");
 const { VertexAI } = require("@google-cloud/vertexai");
 
 const app = express();
 
-// ✅ CORS Setup (only allow your frontend domain)
 app.use(
   cors({
     origin: "https://riyaj-utensils-shop.vercel.app",
@@ -16,16 +17,29 @@ app.use(
 
 app.use(express.json());
 
-// ✅ Vertex AI Setup
+// Vertex AI Setup
 const projectId = "riyaj-utensils-shop-18067";
 const location = "us-central1";
 const modelName = "gemini-2.0-flash-001";
 
-// VertexAI Auth — recommend setting GOOGLE_APPLICATION_CREDENTIALS via Render Dashboard
 const vertexAI = new VertexAI({ project: projectId, location });
 const generativeModel = vertexAI.getGenerativeModel({ model: modelName });
 
-// ✅ /api/chat endpoint
+let shopContext = ""; // extracted catalog text
+
+// ✅ Load PDF context when server starts
+(async () => {
+  try {
+    const dataBuffer = fs.readFileSync("riyaj_catalog.pdf");
+    const pdfData = await pdfParse(dataBuffer);
+    shopContext = pdfData.text.slice(0, 30000); // Limit to avoid Gemini context cutoff
+    console.log("✅ PDF loaded into memory");
+  } catch (err) {
+    console.error("❌ Failed to load PDF context:", err.message);
+  }
+})();
+
+// ✅ Endpoint: /api/chat
 app.post("/api/chat", async (req, res) => {
   const { message } = req.body;
 
@@ -34,8 +48,10 @@ app.post("/api/chat", async (req, res) => {
   }
 
   try {
+    const prompt = `You are a helpful assistant for a utensils shop in Nepal. Use the following product catalog to answer the user's question.\n\nCatalog:\n${shopContext}\n\nUser Question: ${message}`;
+
     const chat = generativeModel.startChat({});
-    const result = await chat.sendMessageStream(message);
+    const result = await chat.sendMessageStream(prompt);
 
     let responseText = "";
     for await (const item of result.stream) {
@@ -50,7 +66,7 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-// ✅ Start Server
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
